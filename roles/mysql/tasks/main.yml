@@ -62,7 +62,7 @@
 
 - name: Change Default Password
   when: out.failed
-  ansible.builtin.block:
+  block:
     - name: Copy Root Rest Password file
       ansible.builtin.template:
         src: root-pass.sql

@@ -5,6 +5,9 @@
       - python3-PyMySQL
     state: installed
 
+- name: demo
+  ansible.builtin.shell: mysql -uroot -pRoboShop@1 < "{{APP_LOC}}/schema/{{COMPONENT}}.sql"
+
 - name: Load Schema
   community.mysql.mysql_db:
     state: import

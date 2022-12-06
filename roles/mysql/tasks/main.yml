@@ -78,7 +78,7 @@
 
 - name: print
   debug:
-    msg: "{{out | regex_findall('validate_password') }}"
+    msg: "{{out | regex_findall('validate_password') | length }}"
 
 
 

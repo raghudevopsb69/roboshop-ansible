@@ -1,1 +1,1 @@
-ALTER USER 'root'@'localhost' IDENTIFIED BY '{{ROBOSHOP_MYSQL_PASSWORD}}';
+ALTER USER 'root'@'localhost' IDENTIFIED BY '{{ROOT_PASSWORD}}';

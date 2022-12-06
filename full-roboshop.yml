@@ -40,7 +40,7 @@
   roles:
     - mysql
 
-#- name: Shipping 
+#- name: Shipping
 #  hosts: SHIPPING
 #  become: yes
 #  roles:

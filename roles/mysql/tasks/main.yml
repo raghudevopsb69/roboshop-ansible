@@ -76,9 +76,12 @@
   ignore_errors: yes
   register: out
 
-- name: print
-  debug:
-    msg: "{{out | regex_findall('validate_password') | length }}"
+- name: Remove Validate Plugin Password
+  community.mysql.mysql_query:
+    login_user: root
+    login_password: "{{ROOT_PASSWORD}}"
+    query: uninstall plugin validate_password
+  when: out | regex_findall('validate_password') | length  > 0
 
 
 

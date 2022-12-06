@@ -1,12 +1,4 @@
 
-#echo show databases | mysql -uroot -p${ROBOSHOP_MYSQL_PASSWORD} &>>$LOG
-#if [ $? -ne 0 ]
-#then
-#echo "ALTER USER 'root'@'localhost' IDENTIFIED BY '${ROBOSHOP_MYSQL_PASSWORD}';" > /tmp/root-pass-sql
-#DEFAULT_PASSWORD=$(grep 'A temporary password' /var/log/mysqld.log | awk '{print $NF}')
-#cat /tmp/root-pass-sql  | mysql --connect-expired-password -uroot -p"${DEFAULT_PASSWORD}" &>>$LOG
-#fi
-#
 #PRINT "Uninstall Validate Plugin Password"
 #echo "show plugins" |  mysql -uroot -p${ROBOSHOP_MYSQL_PASSWORD} | grep validate_password &>>$LOG
 #if [ $? -eq 0 ]; then
@@ -76,10 +68,17 @@
     - name: Change Default Password
       ansible.builtin.shell: cat /tmp/root-pass.sql  | mysql --connect-expired-password -uroot -p"{{ mysql_log['content'] | b64decode | regex_findall('temporary password.*') | join(' ') | split(' ') | last }}"
 
+- name: Get Plugins list
+  community.mysql.mysql_query:
+    login_user: root
+    login_password: "{{ROOT_PASSWORD}}"
+    query: show plugins
+  ignore_errors: yes
+  register: out
 
-
-
-
+- name: print
+  debug:
+    msg: "{{out}}"
 
 
 

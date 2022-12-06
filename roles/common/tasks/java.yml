@@ -1,0 +1,28 @@
+- name: Install Maven
+  ansible.builtin.yum:
+    name: maven
+    state: installed
+
+- name: Include Download App Code Tasks from Common Role
+  ansible.builtin.include_role:
+    name: common
+    tasks_from: download-app-code
+
+- name: Compile Code
+  ansible.builtin.shell: mvn clean package && mv target/{{COMPONENT}}-1.0.jar {{COMPONENT}}.jar
+  args:
+    chdir: "{{ APP_LOC }}"
+
+- name: Load Schema
+  when: LOAD_SCHEMA
+  ansible.builtin.include_role:
+    name: common
+    tasks_from: "{{DBTYPE}}"
+
+- name: SystemD tasks
+  ansible.builtin.include_role:
+    name: common
+    tasks_from: systemd
+
+
+

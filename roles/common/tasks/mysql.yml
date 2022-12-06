@@ -1,0 +1,14 @@
+- name: Install MySQL Client
+  ansible.builtin.yum:
+    name: mariadb
+    state: installed
+
+- name: Load Schema
+  community.mysql.mysql_db:
+    state: import
+    name: all
+    encoding: latin1
+    target: "{{APP_LOC}}/schema/{{COMPONENT}}.sql"
+    login_host: "{{ lookup('aws_ssm', 'param.{{ENV}}.shipping.DB_HOST', region='us-east-1' ) }}"
+    login_user: root
+    login_password: "{{ lookup('aws_ssm', 'param.{{ENV}}.shipping.ROOT_PASSWORD', region='us-east-1' ) }}"

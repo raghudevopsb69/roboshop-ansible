@@ -24,6 +24,9 @@
         - {name: "param.dev.cart.CATALOGUE_HOST", value: "dev-catalogue.devopsb69.online"}
         - {name: "param.dev.cart.CATALOGUE_PORT", value: "8080"}
         - {name: "param.dev.mysql.ROOT_PASSWORD", value: "RoboShop@1"}
+        - {name: "param.dev.shipping.DB_HOST", value: "dev-mysql.devopsb69.online"}
+        - {name: "param.dev.shipping.CART_ENDPOINT", value: "dev-cart.devopsb69.online:8080"}
+        - {name: "param.dev.shipping.ROOT_PASSWORD", value: "RoboShop@1"}
 
 
 

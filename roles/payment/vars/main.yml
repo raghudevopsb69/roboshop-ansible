@@ -1,5 +1,4 @@
-COMPONENT: shipping
+COMPONENT: payment
 APP_USER: roboshop
-APP_LOC: /home/roboshop/user
-DBTYPE: mysql
-LOAD_SCHEMA: yes
+APP_LOC: /home/roboshop/payment
+LOAD_SCHEMA: no

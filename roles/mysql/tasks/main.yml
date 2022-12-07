@@ -66,7 +66,7 @@
       register: mysql_log
 
     - name: Change Default Password
-      ansible.builtin.shell: cat /tmp/root-pass.sql  | mysql --connect-expired-password -uroot -p"{{ mysql_log['content'] | b64decode | regex_findall('temporary password.*') | join(' ') | split(' ') | last }}"
+      ansible.builtin.shell: mysql --connect-expired-password -uroot -p"{{ mysql_log['content'] | b64decode | regex_findall('temporary password.*') | join(' ') | split(' ') | last }}"  </tmp/root-pass.sql
 
 - name: Get Plugins list
   community.mysql.mysql_query:

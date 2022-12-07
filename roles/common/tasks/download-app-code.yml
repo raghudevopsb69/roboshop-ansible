@@ -4,10 +4,6 @@
     name: "{{ APP_USER }}"
   register: appuser
 
-- name: debug
-  debug:
-    msg: "{{appuser}}"
-
 - name: Remove Previous Version of App
   ansible.builtin.file:
     path: "{{ APP_LOC }}"

@@ -1,9 +1,3 @@
-
-#  USER_ID=$(id -u roboshop)
-#  GROUP_ID=$(id -g roboshop)
-#  sed -i -e "/uid/ c uid = ${USER_ID}" -e "/uid/ c uid = ${GROUP_ID}" ${COMPONENT}.ini
-#
-#  SYSTEMD_SETUP
 - name: Install Python
   ansible.builtin.yum:
     name:
@@ -22,11 +16,17 @@
     requirements: /home/roboshop/{{COMPONENT}}/requirements.txt
     executable: pip3
 
-- name: Update Application Parameter file
+- name: Update Application Parameter file - User ID
   ansible.builtin.replace:
     path: /home/roboshop/{{COMPONENT}}/{{COMPONENT}}.ini
     regexp: 'uid'
-    line: uid = {{USER_ID}}
+    line: uid = {{appuser.uid}}
+
+- name: Update Application Parameter file - Group I D
+  ansible.builtin.replace:
+    path: /home/roboshop/{{COMPONENT}}/{{COMPONENT}}.ini
+    regexp: 'gid'
+    line: uid = {{appuser.group}}
 
 - name: SystemD tasks
   ansible.builtin.include_role:

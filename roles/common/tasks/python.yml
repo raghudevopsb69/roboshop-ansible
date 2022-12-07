@@ -17,13 +17,13 @@
     executable: pip3
 
 - name: Update Application Parameter file - User ID
-  ansible.builtin.replace:
+  ansible.builtin.lineinfile:
     path: /home/roboshop/{{COMPONENT}}/{{COMPONENT}}.ini
     regexp: 'uid'
     line: uid = {{appuser.uid}}
 
 - name: Update Application Parameter file - Group I D
-  ansible.builtin.replace:
+  ansible.builtin.lineinfile:
     path: /home/roboshop/{{COMPONENT}}/{{COMPONENT}}.ini
     regexp: 'gid'
     line: uid = {{appuser.group}}

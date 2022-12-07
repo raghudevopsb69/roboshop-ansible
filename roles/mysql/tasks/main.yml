@@ -83,6 +83,15 @@
     query: uninstall plugin validate_password
   when: out | regex_findall('validate_password') | length  > 0
 
+- name: Copy App Usser Setup SQL
+  ansible.builtin.template:
+    src: app-user.sql
+    dest: /tmp/app-user.sql
+
+- name: Create App User in DB
+  ansible.builtin.shell: mysql -uroot -p"{{ ROOT_PASSWORD }}"  </tmp/app-user.sql
+
+
 
 
 

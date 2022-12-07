@@ -32,6 +32,8 @@
         - {name: "param.dev.payment.AMQP_HOST", value: "dev-rabbitmq.devopsb69.online"}
         - {name: "param.dev.payment.AMQP_USER", value: "roboshop"}
         - {name: "param.dev.payment.AMQP_PASS", value: "roboshop123"}
+        - {name: "param.dev.rabbitmq.AMQP_PASS", value: "roboshop123"}
+        - {name: "param.dev.rabbitmq.AMQP_USER", value: "roboshop"}
 
 
 

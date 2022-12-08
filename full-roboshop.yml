@@ -40,21 +40,21 @@
   roles:
     - mysql
 
-#- name: Shipping
-#  hosts: SHIPPING
-#  become: yes
-#  roles:
-#    - shipping
-#
-#- name: RabbitMQ
-#  hosts: RABBITMQ
-#  become: yes
-#  roles:
-#    - rabbitmq
-#
-#- name: Payment
-#  hosts: PAYMENT
-#  become: yes
-#  roles:
-#    - payment
+- name: Shipping
+  hosts: SHIPPING
+  become: yes
+  roles:
+    - shipping
+
+- name: RabbitMQ
+  hosts: RABBITMQ
+  become: yes
+  roles:
+    - rabbitmq
+
+- name: Payment
+  hosts: PAYMENT
+  become: yes
+  roles:
+    - payment
 

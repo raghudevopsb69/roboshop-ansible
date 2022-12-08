@@ -14,5 +14,4 @@
     host: 0.0.0.0
     delay: 5
     timeout: 5
-    state: present
-    
+    state: drained

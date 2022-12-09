@@ -21,6 +21,8 @@ rule_files:
 scrape_configs:
   # The job name is added as a label `job=<job_name>` to any timeseries scraped from this config.
   - job_name: "ec2-nodes"
-    static_configs:
-      - targets: ["172.31.11.80:9100"]
+    ec2_sd_configs:
+      - region: us-east-1
+        port: 9100
+
 

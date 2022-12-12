@@ -18,7 +18,22 @@
     name: prometheus
     state: restarted
 
-- name: Check Service is running
+- name: Check Prometheus Service is running
   ansible.builtin.shell: netstat -lntp | grep 9090
+
+- name: Update alert manager configuration
+  ansible.builtin.template:
+    src: alertmanager.yml
+    dest: /opt/alertmanager/alertmanager.yml
+
+- name: Restart Alert Manager
+  ansible.builtin.systemd:
+    name: alertmanager
+    state: restarted
+
+- name: Check Alert Manager Service is running
+  ansible.builtin.shell: netstat -lntp | grep 9093
+
+
 
 

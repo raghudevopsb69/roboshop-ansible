@@ -3,6 +3,11 @@
     src: record_rules.yml
     dest: /opt/prometheus/record_rules.yml
 
+- name: Copy Alert Rules
+  ansible.builtin.template:
+    src: alert_rules.yml
+    dest: /opt/prometheus/alert_rules.yml
+
 - name: Copy Prometheus Config
   ansible.builtin.template:
     src: prometheus.yml

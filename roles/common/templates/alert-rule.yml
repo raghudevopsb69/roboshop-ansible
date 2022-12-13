@@ -1,7 +1,7 @@
 groups:
   - name: {{SERVICE_NAME}}
     rules:
-      - alert: Application Down - {{SERVICE_NAME}}
+      - alert: Application Down -  {{COMPONENT}}
         expr: node_systemd_unit_state{name="{{SERVICE_NAME}}.service",state="active"} == 0
         labels:
           severity: warning
@@ -9,7 +9,7 @@ groups:
         annotations:
           summary: Application Down - {{SERVICE_NAME}}
           description: InstanceDown - {{SERVICE_NAME}}
-      - alert: Memory Usage Alert
+      - alert: Memory Usage Alert - {{COMPONENT}}
         expr: node_mem_used_percentage > 80
         labels:
           severity: warning

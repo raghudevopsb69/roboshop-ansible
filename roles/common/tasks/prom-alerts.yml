@@ -1,0 +1,5 @@
+- name: Generate prometheus Alert file locally
+  template:
+    src: alert-rule.yml
+    dest: /tmp/{{COMPONENT}}-alert-rule.yml
+

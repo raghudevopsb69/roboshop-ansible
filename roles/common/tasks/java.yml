@@ -24,5 +24,9 @@
     name: common
     tasks_from: systemd
 
+- name: Prometheus Alert
+  ansible.builtin.include_role:
+    name: common
+    tasks_from: prom-alerts
 
 

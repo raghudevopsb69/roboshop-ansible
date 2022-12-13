@@ -22,7 +22,7 @@
   ansible.builtin.systemd:
     name: prometheus
     state: restarted
-  when: stat is failed 
+  when: stat is failed
 
 - name: Check Prometheus Service is running
   ansible.builtin.shell: netstat -lntp | grep 9090

@@ -9,4 +9,11 @@ groups:
         annotations:
           summary: Application Down - {{SERVICE_NAME}}
           description: InstanceDown - {{SERVICE_NAME}}
-
+      - alert: Memory Usage Alert
+        expr: node_mem_used_percentage > 80
+        labels:
+          severity: warning
+          project: roboshop
+        annotations:
+          summary: Memory Usage Alert  - {{SERVICE_NAME}}
+          description: Memory Usage Alert  - {{SERVICE_NAME}}

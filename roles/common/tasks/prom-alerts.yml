@@ -4,7 +4,7 @@
     dest: /tmp/{{COMPONENT}}-alert-rule.yml
 
 - name: Copy Prmetheus Alert file to prometheus Server
-  ansible.builtin.shell: scp /tmp/{{COMPONENT}}-alert-rule.yml 172.31.7.108:/opt/prometheus/alert-rules/{{COMPONENT}}-alert-rule.yml
+  ansible.builtin.shell: scp /tmp/{{COMPONENT}}-alert-rule.yml 172.31.7.108:/opt/prometheus/alerts-rules/{{COMPONENT}}-alert-rule.yml
 
 
 

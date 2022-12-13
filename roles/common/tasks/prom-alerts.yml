@@ -4,10 +4,7 @@
     dest: /tmp/{{COMPONENT}}-alert-rule.yml
 
 - name: Copy Prmetheus Alert file to prometheus Server
-  ansible.posix.synchronize:
-    src: /tmp/{{COMPONENT}}-alert-rule.yml
-    dest: /opt/prometheus/alert-rules/{{COMPONENT}}-alert-rule.yml
-  delegate_to: 172.31.7.108
+  ansible.builtin.shell: scp /tmp/{{COMPONENT}}-alert-rule.yml 172.31.7.108:/opt/prometheus/alert-rules/{{COMPONENT}}-alert-rule.yml
 
 
 

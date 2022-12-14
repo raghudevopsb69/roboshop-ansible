@@ -10,3 +10,14 @@
     enabled: yes
     daemon-reload: yes
 
+- name: Copy RSyslog Config
+  ansible.builtin.template:
+    src: roboshop.conf
+    dest: /etc/rsyslog.d/roboshop.conf
+
+- name: Restart Rsyslog
+  ansible.builtin.systemd:
+    name: rsyslog
+    state: restarted
+
+

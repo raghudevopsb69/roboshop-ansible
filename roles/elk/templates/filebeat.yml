@@ -1,13 +1,11 @@
 filebeat.inputs:
-- type: filestream
-  id: my-filestream-id
+- type: log
   enabled: false
   paths:
-    - /var/log/*.log
+    - {{ LOG_FILE }}
   reload.enabled: false
-output.elasticsearch:
-  hosts: ["localhost:9200"]
-
+output.logstash:
+  hosts: ["172.31.17.239:5044"]
 
 ## Defaults
 filebeat.config.modules:

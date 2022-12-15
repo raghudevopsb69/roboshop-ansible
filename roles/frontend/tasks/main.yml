@@ -20,4 +20,8 @@
     state: started
     enabled: yes
 
+- name: Include Filebeat
+  ansible.builtin.include_role:
+    name: elk
+
 

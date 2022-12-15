@@ -1,6 +1,6 @@
 filebeat.inputs:
 - type: log
-  enabled: false
+  enabled: true
   paths:
     - {{ LOG_FILE }}
   reload.enabled: false

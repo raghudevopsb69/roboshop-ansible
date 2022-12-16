@@ -1,20 +1,20 @@
-- name: Frontend
-  hosts: FRONTEND
-  become: yes
-  roles:
-    - frontend
+#- name: Frontend
+#  hosts: FRONTEND
+#  become: yes
+#  roles:
+#    - frontend
 
-- name: MongoBD
-  hosts: MONGODB
-  become: yes
-  roles:
-    - mongodb
-
-- name: Redis
-  hosts: REDIS
-  become: yes
-  roles:
-    - redis
+#- name: MongoBD
+#  hosts: MONGODB
+#  become: yes
+#  roles:
+#    - mongodb
+#
+#- name: Redis
+#  hosts: REDIS
+#  become: yes
+#  roles:
+#    - redis
 
 - name: Catalogue
   hosts: CATALOGUE

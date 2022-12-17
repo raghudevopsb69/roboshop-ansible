@@ -1,21 +1,21 @@
-#- name: Frontend
-#  hosts: FRONTEND
-#  become: yes
-#  roles:
-#    - frontend
-#
-#- name: MongoBD
-#  hosts: MONGODB
-#  become: yes
-#  roles:
-#    - mongodb
-#
-#- name: Redis
-#  hosts: REDIS
-#  become: yes
-#  roles:
-#    - redis
-#
+- name: Frontend
+  hosts: FRONTEND
+  become: yes
+  roles:
+    - frontend
+
+- name: MongoBD
+  hosts: MONGODB
+  become: yes
+  roles:
+    - mongodb
+
+- name: Redis
+  hosts: REDIS
+  become: yes
+  roles:
+    - redis
+
 - name: Catalogue
   hosts: CATALOGUE
   become: yes
@@ -27,34 +27,34 @@
   become: yes
   roles:
     - user
-#
-#- name: Cart
-#  hosts: CART
-#  become: yes
-#  roles:
-#    - cart
-#
-#- name: MySQL
-#  hosts: MYSQL
-#  become: yes
-#  roles:
-#    - mysql
-#
-#- name: Shipping
-#  hosts: SHIPPING
-#  become: yes
-#  roles:
-#    - shipping
-#
-#- name: RabbitMQ
-#  hosts: RABBITMQ
-#  become: yes
-#  roles:
-#    - rabbitmq
-#
-#- name: Payment
-#  hosts: PAYMENT
-#  become: yes
-#  roles:
-#    - payment
-#
+
+- name: Cart
+  hosts: CART
+  become: yes
+  roles:
+    - cart
+
+- name: MySQL
+  hosts: MYSQL
+  become: yes
+  roles:
+    - mysql
+
+- name: Shipping
+  hosts: SHIPPING
+  become: yes
+  roles:
+    - shipping
+
+- name: RabbitMQ
+  hosts: RABBITMQ
+  become: yes
+  roles:
+    - rabbitmq
+
+- name: Payment
+  hosts: PAYMENT
+  become: yes
+  roles:
+    - payment
+

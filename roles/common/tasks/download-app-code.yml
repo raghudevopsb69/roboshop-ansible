@@ -9,11 +9,6 @@
     path: "{{ APP_LOC }}"
     state: absent
 
-- name: Create App Location
-  ansible.builtin.file:
-    path: "{{ APP_LOC }}"
-    state: directory
-
 ### Since we are moving to nexus to download artifacts we commented this
 #- name: Download App Content & Extract it
 #  ansible.builtin.unarchive:
@@ -27,6 +22,10 @@
 #    dest: "{{ APP_LOC }}/"
 #    remote_src: yes
 
+- name: Create App Location
+  ansible.builtin.file:
+    path: "{{ APP_LOC }}"
+    state: directory
 
 - name: Download App Content & Extract it
   ansible.builtin.unarchive:

@@ -1,6 +1,11 @@
-- name: Install Maven
+#- name: Install Maven
+#  ansible.builtin.yum:
+#    name: maven
+#    state: installed
+
+- name: Install Java
   ansible.builtin.yum:
-    name: maven
+    name: java-1.8.0-openjdk
     state: installed
 
 - name: Include Download App Code Tasks from Common Role
@@ -8,10 +13,11 @@
     name: common
     tasks_from: download-app-code
 
-- name: Compile Code
-  ansible.builtin.shell: mvn clean package && mv target/{{COMPONENT}}-1.0.jar {{COMPONENT}}.jar
-  args:
-    chdir: "{{ APP_LOC }}"
+## Since compilation is part of ci process, we dont need this 
+#- name: Compile Code
+#  ansible.builtin.shell: mvn clean package && mv target/{{COMPONENT}}-1.0.jar {{COMPONENT}}.jar
+#  args:
+#    chdir: "{{ APP_LOC }}"
 
 - name: Load Schema
   when: LOAD_SCHEMA

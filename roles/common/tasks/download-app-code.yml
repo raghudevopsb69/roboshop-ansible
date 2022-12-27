@@ -25,7 +25,8 @@
 
 - name: Download App Content & Extract it
   ansible.builtin.unarchive:
-    src: http://nexus.devopsb69.online:8081/repository/{{COMPONENT}}/{{COMPONENT}}-{{APP_VERSION}}.zip
+    #src: http://nexus.devopsb69.online:8081/repository/{{COMPONENT}}/{{COMPONENT}}-{{APP_VERSION}}.zip
+    src: http://44.202.233.151:8081/repository/frontend/frontend-1.0.0.zip
     dest: "/tmp"
     remote_src: yes
 

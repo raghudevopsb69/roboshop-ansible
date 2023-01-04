@@ -36,6 +36,8 @@
         - {name: "param.dev.rabbitmq.AMQP_USER", value: "roboshop"}
         - {name: "param.NEXUS_USER", value: "admin"}
         - {name: "param.NEXUS_PASS", value: "admin123"}
+        - {name: "param.dev.docdb.USERNAME", value: "admin1"}
+        - {name: "param.dev.docdb.PASSWORD", value: "RoboShop123"}
 
 
 

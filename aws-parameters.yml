@@ -38,6 +38,8 @@
         - {name: "param.NEXUS_PASS", value: "admin123"}
         - {name: "param.dev.docdb.USERNAME", value: "admin1"}
         - {name: "param.dev.docdb.PASSWORD", value: "RoboShop123"}
+        - {name: "param.dev.rds.USERNAME", value: "admin1"}
+        - {name: "param.dev.rds.PASSWORD", value: "RoboShop123"}
 
 
 

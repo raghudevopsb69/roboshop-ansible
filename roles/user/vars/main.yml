@@ -4,3 +4,4 @@ APP_LOC: /home/roboshop/user
 DBTYPE: mongo
 LOAD_SCHEMA: yes
 SERVICE_NAME: user
+SCHEMA_NAME: users

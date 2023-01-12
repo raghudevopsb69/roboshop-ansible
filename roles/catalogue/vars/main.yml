@@ -4,3 +4,5 @@ APP_LOC: /home/roboshop/catalogue
 DBTYPE: mongo
 LOAD_SCHEMA: yes
 SERVICE_NAME: catalogue
+SCHEMA_NAME: catalogue
+

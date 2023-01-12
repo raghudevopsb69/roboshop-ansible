@@ -11,11 +11,11 @@
         - {name: "param.dev.catalogue.MONGO_ENDPOINT", value: "dev-docdb.cluster-cbvsbeoyxek4.us-east-1.docdb.amazonaws.com"}
         - {name: "param.dev.catalogue.MONGO_URL", value: "mongodb://admin1:RoboShop123@dev-docdb.cluster-cbvsbeoyxek4.us-east-1.docdb.amazonaws.com:27017/catalogue?tls=true&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false"}
         - {name: "param.dev.user.MONGO", value: "true"}
-        - {name: "param.dev.frontend.CATALOGUE_URL", value: "http://dev-catalogue.devopsb69.online:8080/"}
-        - {name: "param.dev.frontend.USER_URL", value: "http://dev-user.devopsb69.online:8080/"}
-        - {name: "param.dev.frontend.CART_URL", value: "http://dev-cart.devopsb69.online:8080/"}
-        - {name: "param.dev.frontend.SHIPPING_URL", value: "http://dev-shipping.devopsb69.online:8080/"}
-        - {name: "param.dev.frontend.PAYMENT_URL", value: "http://dev-payment.devopsb69.online:8080/"}
+        - {name: "param.dev.frontend.CATALOGUE_URL", value: "http://dev-catalogue.devopsb69.online:80/"}
+        - {name: "param.dev.frontend.USER_URL", value: "http://dev-user.devopsb69.online:80/"}
+        - {name: "param.dev.frontend.CART_URL", value: "http://dev-cart.devopsb69.online:80/"}
+        - {name: "param.dev.frontend.SHIPPING_URL", value: "http://dev-shipping.devopsb69.online:80/"}
+        - {name: "param.dev.frontend.PAYMENT_URL", value: "http://dev-payment.devopsb69.online:80/"}
         - {name: "param.dev.user.MONGO", value: "true"}
         - {name: "param.dev.user.MONGO_ENDPOINT", value: "dev-docdb.cluster-cbvsbeoyxek4.us-east-1.docdb.amazonaws.com"}
         - {name: "param.dev.user.MONGO_URL", value: "mongodb://admin1:RoboShop123@dev-docdb.cluster-cbvsbeoyxek4.us-east-1.docdb.amazonaws.com:27017/users?tls=true&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false"}

@@ -9,7 +9,7 @@
       loop:
         - {name: "param.dev.catalogue.MONGO", value: "true"}
         - {name: "param.dev.catalogue.MONGO_ENDPOINT", value: "dev-mongodb.devopsb69.online"}
-        - {name: "param.dev.catalogue.MONGO_URL", value: "mongodb://dev-mongodb.devopsb69.online:27017/catalogue"}
+        - {name: "param.dev.catalogue.MONGO_URL", value: "mongodb://admin1:RoboShop123@dev-docdb.cluster-cbvsbeoyxek4.us-east-1.docdb.amazonaws.com:27017/catalogue?tls=true&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false"}
         - {name: "param.dev.user.MONGO", value: "true"}
         - {name: "param.dev.frontend.CATALOGUE_URL", value: "http://dev-catalogue.devopsb69.online:8080/"}
         - {name: "param.dev.frontend.USER_URL", value: "http://dev-user.devopsb69.online:8080/"}

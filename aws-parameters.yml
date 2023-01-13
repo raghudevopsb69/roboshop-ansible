@@ -27,6 +27,7 @@
         - {name: "param.dev.shipping.DB_HOST", value: "dev-rds.cluster-cbvsbeoyxek4.us-east-1.rds.amazonaws.com"}
         - {name: "param.dev.shipping.CART_ENDPOINT", value: "dev-cart.devopsb69.online:80"}
         - {name: "param.dev.shipping.ROOT_PASSWORD", value: "RoboShop123"}
+        - {name: "param.dev.shipping.ROOT_USERNAME", value: "admin1"}
         - {name: "param.dev.payment.USER_HOST", value: "dev-user.devopsb69.online"}
         - {name: "param.dev.payment.CART_HOST", value: "dev-cart.devopsb69.online"}
         - {name: "param.dev.payment.AMQP_HOST", value: "dev-rabbitmq.devopsb69.online"}

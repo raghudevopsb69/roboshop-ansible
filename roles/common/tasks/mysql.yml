@@ -12,5 +12,5 @@
     encoding: latin1
     target: "{{APP_LOC}}/schema/{{COMPONENT}}.sql"
     login_host: "{{ lookup('aws_ssm', 'param.{{ENV}}.shipping.DB_HOST', region='us-east-1' ) }}"
-    login_user: root
+    login_user: "{{ lookup('aws_ssm', 'param.{{ENV}}.shipping.ROOT_USERNAME', region='us-east-1' ) }}"
     login_password: "{{ lookup('aws_ssm', 'param.{{ENV}}.shipping.ROOT_PASSWORD', region='us-east-1' ) }}"

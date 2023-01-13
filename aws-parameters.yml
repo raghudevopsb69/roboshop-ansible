@@ -23,10 +23,10 @@
         - {name: "param.dev.cart.REDIS_HOST", value: "dev-elasticache.nud0cy.0001.use1.cache.amazonaws.com"}
         - {name: "param.dev.cart.CATALOGUE_HOST", value: "dev-catalogue.devopsb69.online"}
         - {name: "param.dev.cart.CATALOGUE_PORT", value: "80"}
-        - {name: "param.dev.mysql.ROOT_PASSWORD", value: "RoboShop@1"}
-        - {name: "param.dev.shipping.DB_HOST", value: "dev-mysql.devopsb69.online"}
-        - {name: "param.dev.shipping.CART_ENDPOINT", value: "dev-cart.devopsb69.online:8080"}
-        - {name: "param.dev.shipping.ROOT_PASSWORD", value: "RoboShop@1"}
+        - {name: "param.dev.mysql.ROOT_PASSWORD", value: "RoboShop123"}
+        - {name: "param.dev.shipping.DB_HOST", value: "dev-rds.cluster-cbvsbeoyxek4.us-east-1.rds.amazonaws.com"}
+        - {name: "param.dev.shipping.CART_ENDPOINT", value: "dev-cart.devopsb69.online:80"}
+        - {name: "param.dev.shipping.ROOT_PASSWORD", value: "RoboShop123"}
         - {name: "param.dev.payment.USER_HOST", value: "dev-user.devopsb69.online"}
         - {name: "param.dev.payment.CART_HOST", value: "dev-cart.devopsb69.online"}
         - {name: "param.dev.payment.AMQP_HOST", value: "dev-rabbitmq.devopsb69.online"}

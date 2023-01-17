@@ -45,4 +45,39 @@
         - {name: "param.dev.rds.PASSWORD", value: "RoboShop123"}
 
 
-
+        - {name: "param.prod.catalogue.MONGO", value: "true"}
+        - {name: "param.prod.catalogue.MONGO_ENDPOINT", value: "prod-docdb.cluster-cbvsbeoyxek4.us-east-1.docdb.amazonaws.com"}
+        - {name: "param.prod.catalogue.MONGO_URL", value: "mongodb://admin1:RoboShop123@prod-docdb.cluster-cbvsbeoyxek4.us-east-1.docdb.amazonaws.com:27017/catalogue?tls=true&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false"}
+        - {name: "param.prod.user.MONGO", value: "true"}
+        - {name: "param.prod.frontend.CATALOGUE_URL", value: "http://prod-catalogue.prodopsb69.online:80/"}
+        - {name: "param.prod.frontend.USER_URL", value: "http://prod-user.prodopsb69.online:80/"}
+        - {name: "param.prod.frontend.CART_URL", value: "http://prod-cart.prodopsb69.online:80/"}
+        - {name: "param.prod.frontend.SHIPPING_URL", value: "http://prod-shipping.prodopsb69.online:80/"}
+        - {name: "param.prod.frontend.PAYMENT_URL", value: "http://prod-payment.prodopsb69.online:80/"}
+        - {name: "param.prod.user.MONGO", value: "true"}
+        - {name: "param.prod.user.MONGO_ENDPOINT", value: "prod-docdb.cluster-cbvsbeoyxek4.us-east-1.docdb.amazonaws.com"}
+        - {name: "param.prod.user.MONGO_URL", value: "mongodb://admin1:RoboShop123@prod-docdb.cluster-cbvsbeoyxek4.us-east-1.docdb.amazonaws.com:27017/users?tls=true&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false"}
+        - {name: "param.prod.user.REDIS_HOST", value: "prod-elasticache.nud0cy.0001.use1.cache.amazonaws.com"}
+        - {name: "param.prod.cart.REDIS_HOST", value: "prod-elasticache.nud0cy.0001.use1.cache.amazonaws.com"}
+        - {name: "param.prod.cart.CATALOGUE_HOST", value: "prod-catalogue.prodopsb69.online"}
+        - {name: "param.prod.cart.CATALOGUE_PORT", value: "80"}
+        - {name: "param.prod.mysql.ROOT_PASSWORD", value: "RoboShop123"}
+        - {name: "param.prod.shipping.DB_HOST", value: "prod-rds.cluster-cbvsbeoyxek4.us-east-1.rds.amazonaws.com"}
+        - {name: "param.prod.shipping.CART_ENDPOINT", value: "prod-cart.prodopsb69.online:80"}
+        - {name: "param.prod.shipping.ROOT_PASSWORD", value: "RoboShop123"}
+        - {name: "param.prod.shipping.ROOT_USERNAME", value: "admin1"}
+        - {name: "param.prod.payment.USER_HOST", value: "prod-user.prodopsb69.online"}
+        - {name: "param.prod.payment.USER_PORT", value: "80"}
+        - {name: "param.prod.payment.CART_HOST", value: "prod-cart.prodopsb69.online"}
+        - {name: "param.prod.payment.CART_PORT", value: "80"}
+        - {name: "param.prod.payment.AMQP_HOST", value: "prod-rabbitmq.prodopsb69.online"}
+        - {name: "param.prod.payment.AMQP_USER", value: "roboshop"}
+        - {name: "param.prod.payment.AMQP_PASS", value: "roboshop123"}
+        - {name: "param.prod.rabbitmq.AMQP_PASS", value: "roboshop123"}
+        - {name: "param.prod.rabbitmq.AMQP_USER", value: "roboshop"}
+        - {name: "param.NEXUS_USER", value: "admin"}
+        - {name: "param.NEXUS_PASS", value: "admin123"}
+        - {name: "param.prod.docdb.USERNAME", value: "admin1"}
+        - {name: "param.prod.docdb.PASSWORD", value: "RoboShop123"}
+        - {name: "param.prod.rds.USERNAME", value: "admin1"}
+        - {name: "param.prod.rds.PASSWORD", value: "RoboShop123"}

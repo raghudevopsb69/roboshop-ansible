@@ -16,7 +16,7 @@ pipeline {
       steps {
         sh '''
           aws ec2 describe-instances --filters Name=tag:Name,Values=${COMPONENT}-prod Name=instance-state-name,Values=running --query 'Reservations[*].Instances[*].PrivateIpAddress' --output text >/tmp/ips 
-          ansible-playbook -i /tmp/ips roboshop.yml -e ENV=prod ROLE_NAME=${COMPONENT} -e APP_VERSION=${APP_VERSION}
+          ansible-playbook -i /tmp/ips roboshop.yml -e ENV=prod -e ROLE_NAME=${COMPONENT} -e APP_VERSION=${APP_VERSION}
         '''
       }
     }

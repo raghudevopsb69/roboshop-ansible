@@ -5,7 +5,7 @@
 
 - name: Install Java
   ansible.builtin.yum:
-    name: java-1.8.0-openjdk
+    name: java-17-openjdk
     state: installed
 
 - name: Include Download App Code Tasks from Common Role

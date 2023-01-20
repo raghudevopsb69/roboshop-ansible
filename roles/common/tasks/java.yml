@@ -29,9 +29,9 @@
     name: common
     tasks_from: prom-alerts
 
-- name: Load Schema
-  when: LOAD_SCHEMA
-  ansible.builtin.include_role:
-    name: common
-    tasks_from: "{{DBTYPE}}"
+#- name: Load Schema
+#  when: LOAD_SCHEMA
+#  ansible.builtin.include_role:
+#    name: common
+#    tasks_from: "{{DBTYPE}}"
 
